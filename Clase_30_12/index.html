@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatitos Blog - Todo sobre gatos</title>
+    
+    <!-- Bootstrap CSS 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-hearts"></i> Gatitos Blog
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#articulos">Artículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categorias">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Bienvenido al Mundo Felino</h1>
+                    <p class="lead mb-4">Descubre todo sobre el cuidado, comportamiento y curiosidades de nuestros amigos gatunos.</p>
+                    <button class="btn btn-primary btn-lg" onclick="scrollToArticles()">
+                        Explorar Artículos <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600" alt="Gato" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Explora por Categorías</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card category-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-heart-pulse fs-1 text-danger mb-3"></i>
+                            <h5 class="card-title">Salud y Cuidados</h5>
+                            <p class="card-text">Consejos veterinarios y cuidados esenciales para mantener a tu gato saludable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card category-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-puzzle fs-1 text-warning mb-3"></i>
+                            <h5 class="card-title">Comportamiento</h5>
+                            <p class="card-text">Entiende el lenguaje y comportamiento de tu gato para una mejor convivencia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card category-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-bag-heart fs-1 text-success mb-3"></i>
+                            <h5 class="card-title">Alimentación</h5>
+                            <p class="card-text">Guías nutricionales y recetas caseras para una dieta balanceada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artículos del Blog -->
+    <section id="articulos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Últimos Artículos</h2>
+            
+            <!-- Filtros -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all">Todos</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="salud">Salud</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="comportamiento">Comportamiento</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="alimentacion">Alimentación</button>
+            </div>
+
+            <div class="row g-4" id="blog-posts">
+                <!-- Artículo 1 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="salud">
+                    <article class="card h-100 shadow-sm blog-card">
+                        <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?w=400" class="card-img-top" alt="Gato en veterinario">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Salud</span>
+                                <small class="text-muted ms-2"><i class="bi bi-calendar3"></i> 15 Dic 2024</small>
+                            </div>
+                            <h5 class="card-title">10 Señales de que tu Gato Necesita Atención Veterinaria</h5>
+                            <p class="card-text">Aprende a identificar los síntomas que indican que tu gato necesita atención médica inmediata.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-eye"></i> 1,234 vistas
+                                <i class="bi bi-heart ms-3"></i> 89 likes
+                            </small>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Artículo 2 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="comportamiento">
+                    <article class="card h-100 shadow-sm blog-card">
+                        <img src="https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?w=400" class="card-img-top" alt="Gato jugando">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-warning">Comportamiento</span>
+                                <small class="text-muted ms-2"><i class="bi bi-calendar3"></i> 12 Dic 2024</small>
+                            </div>
+                            <h5 class="card-title">¿Por qué Ronronean los Gatos? Misterios Revelados</h5>
+                            <p class="card-text">Descubre las fascinantes razones detrás del ronroneo y lo que tu gato te está comunicando.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-eye"></i> 2,156 vistas
+                                <i class="bi bi-heart ms-3"></i> 142 likes
+                            </small>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Artículo 3 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="alimentacion">
+                    <article class="card h-100 shadow-sm blog-card">
+                        <img src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=400" class="card-img-top" alt="Gato comiendo">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-success">Alimentación</span>
+                                <small class="text-muted ms-2"><i class="bi bi-calendar3"></i> 10 Dic 2024</small>
+                            </div>
+                            <h5 class="card-title">Guía Completa de Nutrición Felina</h5>
+                            <p class="card-text">Todo lo que necesitas saber sobre la alimentación adecuada para cada etapa de vida de tu gato.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-eye"></i> 987 vistas
+                                <i class="bi bi-heart ms-3"></i> 76 likes
+                            </small>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Artículo 4 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="comportamiento">
+                    <article class="card h-100 shadow-sm blog-card">
+                        <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=400" class="card-img-top" alt="Gato curioso">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-warning">Comportamiento</span>
+                                <small class="text-muted ms-2"><i class="bi bi-calendar3"></i> 8 Dic 2024</small>
+                            </div>
+                            <h5 class="card-title">Lenguaje Corporal Felino: Guía Ilustrada</h5>
+                            <p class="card-text">Aprende a interpretar las posturas, movimientos de cola y orejas de tu gato.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-eye"></i> 1,567 vistas
+                                <i class="bi bi-heart ms-3"></i> 123 likes
+                            </small>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Artículo 5 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="salud">
+                    <article class="card h-100 shadow-sm blog-card">
+                        <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=400" class="card-img-top" alt="Gato en casa">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Salud</span>
+                                <small class="text-muted ms-2"><i class="bi bi-calendar3"></i> 5 Dic 2024</small>
+                            </div>
+                            <h5 class="card-title">Calendario de Vacunación para Gatos</h5>
+                            <p class="card-text">Mantén a tu gato protegido con este calendario completo de vacunas esenciales.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-eye"></i> 2,345 vistas
+                                <i class="bi bi-heart ms-3"></i> 198 likes
+                            </small>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Artículo 6 -->
+                <div class="col-lg-4 col-md-6 blog-item" data-category="alimentacion">
+                    <article class="card h-100 shadow-sm blog-card">
+                        <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=400" class="card-img-top" alt="Gato con comida">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-success">Alimentación</span>
+                                <small class="text-muted ms-2"><i class="bi bi-calendar3"></i> 3 Dic 2024</small>
+                            </div>
+                            <h5 class="card-title">Alimentos Prohibidos para Gatos</h5>
+                            <p class="card-text">Lista completa de alimentos tóxicos y peligrosos que debes evitar dar a tu gato.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-eye"></i> 3,421 vistas
+                                <i class="bi bi-heart ms-3"></i> 267 likes
+                            </small>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="mb-3">Suscríbete a Nuestro Newsletter</h3>
+                    <p>Recibe los mejores consejos y artículos sobre gatos directamente en tu correo.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form id="newsletter-form" class="row g-3">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-light btn-lg w-100">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contáctanos</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-hearts"></i> Gatitos Blog</h5>
+                    <p class="text-muted">Tu fuente confiable de información sobre gatos.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h6>Síguenos</h6>
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="text-center text-muted">
+                <small>&copy; 2024 Gatitos Blog. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Back to Top -->
+    <button id="backToTop" class="btn btn-primary" title="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
