@@ -228,7 +228,7 @@ Este es un repositorio educativo. Los estudiantes pueden:
 
 ## 📧 Contacto
 
-Para consultas sobre el material del curso, contactar a través de los canales oficiales de la universidad.
+Para consultas sobre el material del curso, contactar al correo electronico sabina.clases25@gmail.com
 
 ---
 
